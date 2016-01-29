@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <style>
+            #bc-container .form-inline {
+                padding: 19px 19px 0 19px;
+            }
+            .fctr-logo {
+                float: right;
+                position: relative;
+                top: -50px;
+            }
+        </style>
+        
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18120973-1']);
+  _gaq.push(['_setDomainName', 'fctr.be']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+        </script>
+    </head>
+    <body>
+        <div id="bc-container">
+            <form class="form-inline">
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on">&euro;</span>
+                            <input id="bc-amount" class="span2" type="text" size="16" placeholder="Bedrag">
+                        </div>
+                        <select class="span1" id="bc-vat_rate">
+                            <option value="0.21">21%</option>
+                            <option value="0.12">12%</option>
+                            <option value="0.06">6%</option>
+                        </select>
+                        <select class="span2" id="bc-incl_excl" title="Is het opgegeven bedrag inclusief of exclusief BTW?">
+                            <option value="excl">exclusief</option>
+                            <option value="incl">inclusief</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary" id="bc-calculate_button">Bereken</button>
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+            </form>
+            <form class="well">
+                    <div class="control-group">
+                        <label class="control-label">Bedrag</label>
+                        <div class="controls">
+                            <div class="input-prepend input-append">
+                                <span class="add-on">&euro;</span>
+                                <span class="input-xlarge uneditable-input" id="bc-amount_result">0.00</span>
+                                <span class="add-on">inclusief</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">BTW</label>
+                        <div class="controls">
+                            <div class="input-prepend">
+                                <span class="add-on">&euro;</span>
+                                <span class="input-xlarge uneditable-input" id="bc-vat_result">0.00</span>
+                            </div>
+                        </div>                    
+                    </div>
+                    <a class="fctr-logo" href="http://www.fctr.be"><img src="img/fctr_small.png"></a>
+            </form>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/btw-calculator.js"></script>
+    </body>
+</html>

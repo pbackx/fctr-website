@@ -1,0 +1,36 @@
+---
+layout: page
+status: publish
+published: true
+title: Kennisbank
+author:
+  display_name: Peter Backx
+  login: Peter Backx
+  email: peter.backx@gmail.com
+  url: ''
+author_login: Peter Backx
+author_email: peter.backx@gmail.com
+wordpress_id: 608
+wordpress_url: http://www.fctr.be/?page_id=608
+date: '2014-11-08 14:09:36 +0100'
+date_gmt: '2014-11-08 14:09:36 +0100'
+categories: []
+tags: []
+comments: []
+---
+<p>Nieuw op FCTR is de kennisbank voor ondernemers. Momenteel wordt er druk gewerkt aan het invoeren van alle vragen van de laatste jaren. De komende weken mag je hier dus veel meer extra informatie verwachten.</p>
+<p>In onze mailbox krijgen we heel wat vragen. Van kleine vragen of iets mag ingebracht worden als onkost tot grote vragen hoe de BTW aangifte in te vullen. Op deze pagina's verzamelen we al deze vragen.</p>
+<p>Vind je geen antwoord? <a title="Andere vraag?" href="mailto:peter.backx@fctr.be">Neem dan zeker contact op</a>.</p>
+
+  <ul class="post-list">
+    {% for post in site.categories['kennisbank'] %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
