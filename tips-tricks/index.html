@@ -1,23 +1,27 @@
 ---
 layout: default
+title: Tips & Tricks
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Tips & Tricks</h1>
+
+  <form id="live-search" action="">
+    Zoeken: 
+    <input type="text" id="filter" value="" />
+    <span id="filter-count"></span>
+  </form>
 
   <ul class="post-list">
     {% for post in site.categories['tips-tricks'] %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+	<p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

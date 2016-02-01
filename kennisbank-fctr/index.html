@@ -22,14 +22,19 @@ comments: []
 <p>In onze mailbox krijgen we heel wat vragen. Van kleine vragen of iets mag ingebracht worden als onkost tot grote vragen hoe de BTW aangifte in te vullen. Op deze pagina's verzamelen we al deze vragen.</p>
 <p>Vind je geen antwoord? <a title="Andere vraag?" href="mailto:peter.backx@fctr.be">Neem dan zeker contact op</a>.</p>
 
+  <form id="live-search" action="">
+    Zoeken:
+    <input type="text" id="filter" value="" />
+    <span id="filter-count"></span>
+  </form>
+
   <ul class="post-list">
     {% for post in site.categories['kennisbank'] %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+	<p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
       </li>
     {% endfor %}
   </ul>
