@@ -1,2 +1,4 @@
-<li><a href="{{ "/kennisbank-fctr/" | prepend:site.baseurl }}">Kennisbank</a></li>
-<li><a href="{{ "/tips-tricks/" | prepend:site.baseurl }}">Tips & Tricks</a></li>
+<li{% if page.url contains '/starten-in-bijberoep-in-5-stappen' %} class="active"{% endif %}><a href="{{ "/starten-in-bijberoep-in-5-stappen/" | prepend:site.baseurl }}">Starten in 5 stappen</a></li>
+<li{% if page.url contains '/btw-berekenen' %} class="active"{% endif %}><a href="{{ "/btw-berekenen/" | prepend:site.baseurl }}">BTW Berekenen</a></li>
+<li{% if page.url contains '/kennisbank' %} class="active"{% endif %}><a href="{{ "/kennisbank-fctr/" | prepend:site.baseurl }}">Kennisbank</a></li>
+<li{% if page.url contains '/tips-tricks' %} class="active"{% endif %}><a href="{{ "/tips-tricks/" | prepend:site.baseurl }}">Tips &amp; Tricks</a></li>

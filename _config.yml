@@ -26,3 +26,8 @@ defaults:
       type: "posts"
     values:
       permalink: "/kennisbank/:title/"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

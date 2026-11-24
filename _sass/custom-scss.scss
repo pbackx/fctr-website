@@ -12,3 +12,249 @@
   @extend .table;
   @extend .table-bordered;
 }
+
+// Branded navbar
+.navbar-default {
+  border-top: 3px solid $brand-primary;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  .navbar-nav > li > a {
+    font-size: 14px;
+    transition: color 0.15s ease;
+  }
+
+  .navbar-toggle {
+    border-color: #d4d4d4;
+    .icon-bar {
+      background-color: #333;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    border-bottom: 2px solid $brand-primary;
+  }
+}
+
+.fctr-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.fctr-brand-icon {
+  height: 38px;
+  width: auto;
+}
+
+.fctr-brand-text {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.fctr-brand-tld {
+  color: $brand-primary;
+}
+
+// Homepage hero & intro
+.fctr-hero {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid $brand-primary;
+  border-radius: 6px;
+  padding: 28px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.fctr-hero-logo {
+  width: 108px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.fctr-hero-actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .fctr-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 22px 18px;
+  }
+
+  .fctr-hero-actions {
+    justify-content: center;
+  }
+}
+
+.fctr-intro {
+  margin-bottom: 26px;
+}
+
+// Homepage pillar cards
+.fctr-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .fa {
+      color: $brand-primary;
+      font-size: 18px;
+    }
+  }
+
+  p:last-child,
+  ul:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Sidebar cards
+.fctr-sidebar-card {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-top: 3px solid $brand-primary;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+
+  &--subtle {
+    border-top-color: #333333;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .fa {
+      color: $brand-primary;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+
+.fctr-sidebar-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+
+  li + li {
+    margin-top: 6px;
+  }
+}
+
+// Live search & post list polish
+#live-search {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin: 20px 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+
+  #filter {
+    flex: 1 1 220px;
+    padding: 6px 10px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+  }
+
+  #filter-count {
+    font-size: 13px;
+    color: $gray;
+  }
+}
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Footer
+.footer {
+  border-top: 1px solid #eaeaea;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.fctr-footer-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fctr-footer-icon {
+  height: 20px;
+  width: auto;
+  opacity: 0.85;
+}
