@@ -1,5 +1,5 @@
 $(function(){
-    $('#bc-incl_excl').tooltip({placement: "bottom"})
+    // Tooltip: native browser tooltip via the title attribute (Bootstrap 2 JS removed for security).
     
     $('#bc-incl_excl').change(function() {
         var selection = $(this).val()
